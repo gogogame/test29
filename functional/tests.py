@@ -1,10 +1,10 @@
 from django.test import TestCase
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from django.test import LiveServerTestCase
+import time
 
 # Create your tests here.
-
-# This is Functional tests
 
 class NewVisitorTest(LiveServerTestCase):
 
@@ -20,6 +20,10 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Title is correct
         self.assertIn('Quiz', self.browser.title)
+        header_text = self.browser.find_element_by_tag_name('h1').text
+        self.assertIn('Quiz', header_text)
 
-        # Still havn't done
+        #
+        #inputbox = self.browser.find_element_by_id('Question')
+
         self.fail('Finish the test!')
