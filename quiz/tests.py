@@ -1,25 +1,9 @@
+from django.urls import resolve
 from django.test import TestCase
-from selenium import webdriver
-from django.test import LiveServerTestCase
+from quiz.views import home_page
 
-# Create your tests here.
+class HomePageTest(TestCase):
 
-# This is Functional tests
-
-class NewVisitorTest(LiveServerTestCase):
-
-    def setUp(self):
-        self.browser = webdriver.Firefox()
-
-    def tearDown(self):
-        self.browser.quit()
-
-    def test_can_start_a_question_and_retrieve_it_later(self):
-        # I need to make a quiz app, so it begin
-        self.browser.get(self.live_server_url)
-
-        # Title is correct
-        self.assertIn('Quiz', self.browser.title)
-
-        # Still havn't done
-        self.fail('Finish the test!')
+    def test_root_url_resolves_to_home_page_view(self):
+        found = resolve('/')
+        self.assertEqual(found.func, home_page)
