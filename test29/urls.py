@@ -1,8 +1,9 @@
 from django.contrib import admin
-from django.urls import include, path
-from quiz import views
+from django.urls import path, include
 
-#
+from quiz import urls as quiz_urls
+
 urlpatterns = [
-    path('', views.home_page, name='home'),
+    path('admin/', admin.site.urls),
+    path('quiz/', include(quiz_urls)),
 ]

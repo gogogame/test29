@@ -16,13 +16,14 @@ class NewVisitorTest(LiveServerTestCase):
 
     def test_can_start_a_question_and_retrieve_it_later(self):
         # I need to make a quiz app, so it begin
-        self.browser.get(self.live_server_url)
+        self.browser.get(self.live_server_url + '/quiz')
 
         # Title is correct
         self.assertIn('Quiz', self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn('Quiz', header_text)
 
+        time.sleep(2)
         #
         #inputbox = self.browser.find_element_by_id('Question')
 
