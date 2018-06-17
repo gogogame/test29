@@ -6,7 +6,8 @@ class Question(models.Model):
 
 
 # Possible answer True or False, include amount answered
-class Choice(models.Model):
+class Answer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice = models.CharField(max_length=5)
-    correct_answer = models.IntegerField(default=0)
+    choice = models.BooleanField(default=True)
+    correct_answer = models.BooleanField(default=False)
+    amount_answer = models.IntegerField(default=0)
