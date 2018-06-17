@@ -5,16 +5,14 @@ from quiz.models import Question, Answer
 
 # Create your views here.
 def home_page(request):
-    return render(request, 'home.html')
+    question_list = Question.objects.order_by('id')
+    context = {'question_list': question_list}
+    return render(request, 'home.html', context)
 
 def detail(request, question_id):
-    try:
-        question = Question.objects.get(pk=question_id)
-    except Question.DoesNotExist:
-        raise Http404("Question does not exist")
+    question = get_object_or_404(Question, pk=question_id)
     return render(request, 'detail.html', {'question': question})
 
 def results(request, question_id):
-    def results(request, question_id):
-        question = get_object_or_404(Question, pk=question_id)
+    question = get_object_or_404(Question, pk=question_id)
     return render(request, 'result.html', {'question': question})
