@@ -5,21 +5,18 @@
 
   <body>
   <h1>Quiz</h1>
+<h2> Create new question</h2>
 
-  {% if question_list %}
-    <ul>
-    {% for question in question_list %}
-        <li><a href="/quiz/{{ question.id }}/">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No question asked. Create one?</p>
-
-{% endif %}
-  <h2> Create new question</h2>
-<form method="POST">
+ <form method="POST">
   <input name="item_text" id="id_new_item" placeholder="Enter a new question" />
   {% csrf_token %}
-</form>
+
+      <table id="id_list_table">
+          <tr><td>{{ new_item_text }}</tr></td>
+
+    <p>No question asked. Create one?</p>
+
+    </form>
+
 </body>
 </html>

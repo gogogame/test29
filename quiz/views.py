@@ -5,9 +5,10 @@ from quiz.models import Question, Answer
 
 # Create your views here.
 def home_page(request):
-    question_list = Question.objects.order_by('id')
-    context = {'question_list': question_list}
-    return render(request, 'home.html', context)
+    new_item_text = Question(question_text='item_text')
+    return render(request, 'home.html', {
+        'new_item_text': request.POST.get( 'item_text', '' ),
+    })
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

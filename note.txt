@@ -1,0 +1,110 @@
+﻿commit b1185830e5a92427a9000a4ea7b2dfca141fea48
+Author: gogogame <ken.tsuki@hotmail.com>
+Date:   Thu Mar 29 13:13:19 2018 +0700
+
+    first commit
+
+Description:
+    commit แรก
+
+----------------------------
+
+commit b2ae17e048e05e4727d6ad8c44c74f369885c3da
+Author: gogogame <ken.tsuki@hotmail.com>
+Date:   Thu Mar 29 13:32:38 2018 +0700
+
+    begin functional test, write model
+
+Description:
+    เขียน Function test และ Model เบื้องต้น(ก้อป tutorial มา)
+    
+
+----------------------------
+
+
+commit d3acc4aafb7dc7f558e4c79d99c279e5a78f5729
+Author: gogogame <ken.tsuki@hotmail.com>
+Date:   Thu Mar 29 13:45:48 2018 +0700
+
+    First unittest and seperate FT
+
+Description:
+    มี unittest จึงสร้างtest แยกกัน 
+    
+
+----------------------------
+
+commit ecf4aecba38dfc03d0a7c66d4863c877baf8dc83
+Author: gogogame <ken.tsuki@hotmail.com>
+Date:   Thu Mar 29 14:16:45 2018 +0700
+
+    refactor homepage use template, add app in setting, silent model
+
+Description:
+    สร้าง template ขึ้นมาใช้แทน HttpRespond ใส่ชื่อแอพ quiz ลงใน setting.py installed app
+    
+
+----------------------------
+
+
+commit 2168eb1ae6499afb905b170c85d073b962630423
+Author: gogogame <ken.tsuki@hotmail.com>
+Date:   Thu Mar 29 14:28:40 2018 +0700
+
+    migrate question model
+
+Description:
+    
+    เป็น commit หลังจากเขียนmodel question 
+
+----------------------------
+
+commit e9be87d6418bb74c043be8ab23b9e2cb3a921576
+Author: gogogame <ken.tsuki@hotmail.com>
+Date:   Thu Mar 29 15:26:10 2018 +0700
+
+    add corespond pages, url for web and app
+
+Description:
+    สร้าง view ของหน้าอื่นๆขึ้นมาเพื่อให้สมบูรณ์ แต่ใช้งานอะไรยังไม่ได้ (และก็จำไม่ได้ด้วยทำอะไรไว้บ้างถึงขึ้น server error 500 :<)
+    
+
+----------------------------
+
+Vของใหม่ 
+
+commit bde2095dd5ddc57e99f8db7aadd4bf09d43acd5f
+Author: Your Name <you@example.com>
+Date:   Sun Jun 17 21:32:45 2018 +0700
+
+    remove view for vote, change choice to answer model
+
+Description:
+    เนื่องจากทำก้ปโค้ดของใน tutorial มาแต่ยังไม่ได้แก้ไขชื่อจึงต้องไล่แก้ไขชื่อทั้งใน view detail และ index (เปลี่ยนชื่อเป็น home_page) และลบ vote ออกเพราะ เราจะให้ใช้เป้นคำตอบและจะนวนที่ตอบในข้อนั้นแทน
+    
+
+----------------------------
+
+commit 8f7abcc2ef3c73e4d0668115542da621bf9e451b
+Author: Your Name <you@example.com>
+Date:   Sun Jun 17 21:33:13 2018 +0700
+
+    migrate choice
+
+Description:
+    เป็น commit หลังจากเขียนmodel choice ขึ้นมาใหม่ 
+    
+
+----------------------------
+commit b60634c198173491721d08ef642fc6fb95585e0c
+Author: Your Name <you@example.com>
+Date:   Sun Jun 17 23:23:50 2018 +0700
+
+    Question now shows up in homepage, question links to answer
+
+Description:
+    สามารถทำให้คำถามปรากฏขึ้นบนหน้า home_page ได้แล้ว และสามารถกดเพื่อลิง้ค์ไปยังหน้าตอบคำถามได้ ปุ่มตอบคำถามสามารถยังไม่สามารถใช้เก็บค่าได้ และปุ่มที่หน้า homepage ในการสร้างคำถามยังไม่สามารถใช้งานได้ (อาจทำการ refactor ส่วนสร้างคำถามในหน้าแรกภายหลัง)
+    
+
+----------------------------
+
